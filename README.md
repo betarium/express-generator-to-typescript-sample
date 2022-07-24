@@ -14,10 +14,10 @@ cd express-generator-to-typescript-sample
 
 rem git init
 rem git add .
-rem git commit -m "init project"
+rem git commit -m "create project"
 ```
 
-### 2.config typescript
+### 2.init typescript
 
 ```
 pnpm install typescript
@@ -47,7 +47,7 @@ rem git add .
 rem git commit -m "init typescript"
 ```
 
-### 3.config typescript
+### 3.edit config
 
 Edit package.json.
 ```
@@ -65,6 +65,8 @@ Edit tsconfig.json.
     "outDir": "./build/",
 ```
 
+### 4.edit source
+
 Edit require to import.
 * src/app.ts
 * src/routes/index.ts
@@ -81,16 +83,14 @@ edit require path in src/main.ts.
 var app = require('./app');
 ```
 
-edit view setting in app.ts.
+edit view setting in src/app.ts.
 ```
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
-### 4.test server
-
-Build and start express.
+### 5.build and start server
 
 ```
 pnpm build && pnpm start
@@ -101,7 +101,7 @@ Open http://localhost:3000/ in browser.
 ## Command
 
 ```
-pnpm start     # start express server for javascript.
-pnpm debug     # start express server for typescript in development.
+pnpm start     # start express server in javascript.
+pnpm debug     # start express server in typescript with development mode.
 pnpm build     # build typescript.
 ```
