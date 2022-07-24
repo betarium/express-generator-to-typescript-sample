@@ -73,7 +73,8 @@ Edit require to import.
 * src/routes/users.ts
 
 ```
-import express = require('express');
+//var express = require('express');
+import express from 'express';
 ``` 
 
 edit require path in src/main.ts.
