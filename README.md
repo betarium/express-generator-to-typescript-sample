@@ -1,5 +1,7 @@
 # express-generator to typescript sample
 
+https://github.com/expressjs/generator
+
 ## Action
 
 ### 1.create project
@@ -23,7 +25,7 @@ pnpm tsc --init
 
 pnpm install -D @types/node
 pnpm install -D @types/express
-pnpm install -D ts-node
+pnpm install ts-node
 pnpm install -D ts-node-dev
 
 pnpm install
@@ -43,20 +45,34 @@ echo build/ >> .gitignore
 
 rem git add .
 rem git commit -m "init typescript"
-
-npm start
-npm debug
-npm build
 ```
 
 ### 3.config typescript
 
-Edit package.json, tsconfig.json.
+Edit package.json.
+```
+  "scripts": {
+    "start": "node ./build/main.js",
+    "debug": "ts-node-dev ./src/main.ts",
+    "build": "tsc"
+  },
+```
+
+Edit tsconfig.json.
+```
+    "rootDir": "./src/",
+    "baseUrl": "./src/",
+    "outDir": "./build/",
+```
 
 Edit require to import.
 * src/app.ts
 * src/routes/index.ts
 * src/routes/users.ts
+
+```
+import express = require('express');
+``` 
 
 edit require path in src/main.ts.
 
