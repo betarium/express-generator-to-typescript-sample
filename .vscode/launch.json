@@ -5,16 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "command": "pnpm debug",
+            "name": "Debug server",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "build/main.js",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
-        }
+            "type": "node-terminal"
+        },
+        {
+            "command": "pnpm start",
+            "name": "Start server",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "pnpm install",
+            "name": "Initialize",
+            "request": "launch",
+            "type": "node-terminal"
+        },
     ]
 }
