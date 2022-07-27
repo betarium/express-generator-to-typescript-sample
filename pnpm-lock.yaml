@@ -5,6 +5,7 @@ dependencies:
   http-errors: 1.6.3
   jade: 1.11.0
   morgan: 1.9.1
+  tsconfig-paths: 4.0.0
   typescript: 4.7.4
 devDependencies:
   '@types/express': 4.17.13
@@ -660,6 +661,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-J76sbGKeLtu7uwW97Ntzb1UvGnpKTDplYa9ROr2gNRhM+SxvlBSG0Ees3TQ8+7ya2UVkzMEeFxhRhEpN68s7Tg==
+  /json5/2.2.1:
+    dev: false
+    engines:
+      node: '>=6'
+    hasBin: true
+    resolution:
+      integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==
   /jstransformer/0.0.2:
     dependencies:
       is-promise: 2.2.2
@@ -1002,7 +1010,6 @@ packages:
     resolution:
       integrity: sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
   /strip-bom/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -1098,6 +1105,14 @@ packages:
         optional: true
     resolution:
       integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==
+  /tsconfig-paths/4.0.0:
+    dependencies:
+      json5: 2.2.1
+      minimist: 1.2.6
+      strip-bom: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha512-SLBg2GBKlR6bVtMgJJlud/o3waplKtL7skmLkExomIiaAtLGtVsoXIqP3SYdjbcH9lq/KVv7pMZeCBpLYOit6Q==
   /tsconfig/7.0.0:
     dependencies:
       '@types/strip-bom': 3.0.0
@@ -1240,4 +1255,5 @@ specifiers:
   morgan: ~1.9.1
   ts-node: ^10.9.1
   ts-node-dev: ^2.0.0
+  tsconfig-paths: ^4.0.0
   typescript: ^4.7.4

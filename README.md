@@ -8,6 +8,8 @@ https://github.com/expressjs/generator
 
 ```
 npm install -g pnpm
+pnpm install -g typescript
+
 pnpx express-generator --git express-generator-to-typescript-sample
 
 cd express-generator-to-typescript-sample
@@ -27,6 +29,7 @@ pnpm install -D @types/node
 pnpm install -D @types/express
 pnpm install ts-node
 pnpm install -D ts-node-dev
+pnpm install tsconfig-paths
 
 pnpm install
 
@@ -53,7 +56,7 @@ Edit package.json.
 ```
   "scripts": {
     "start": "node ./build/main.js",
-    "debug": "ts-node-dev ./src/main.ts",
+    "debug": "ts-node-dev -r tsconfig-paths/register ./src/main.ts",
     "build": "tsc"
   },
 ```
@@ -88,7 +91,7 @@ edit view setting in src/app.ts.
 ```
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 ```
 
 ### 5.build and start server
